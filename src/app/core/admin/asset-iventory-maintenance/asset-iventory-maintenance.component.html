@@ -1,0 +1,323 @@
+<div class="header pb-6">
+    <div class="container-fluid">
+        <div class="header-body">
+            <div class="row align-items-center py-4">
+                <div class="col-lg-6 col-7">
+                    <h6 class="h2 text-dark d-inline-block mb-0">Maintenance</h6>
+  
+                    <nav aria-label="breadcrumb" class=" d-none d-md-inline-block ml-md-4">
+                        <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                            <li class=" breadcrumb-item">
+                                <a href="javascript:void(0)"> <i class="far fa-edit text-dark"> </i> </a>
+                            </li>
+                            <li aria-current="page" class="breadcrumb-item active">
+                                Maintenance
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="col-lg-6 col-5 text-right">
+                  <h3>{{today | date:'fullDate'}}</h3>
+                </div>
+            </div>
+  
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid mt--6">
+    <div class="row">
+        <div class="col-md-12 col-lg-6">
+            <div class="card">
+                <div class="card-header bg-secondary">
+                    <h3 class="m-0">Types of Maintenance</h3>
+                </div>
+                <div class="card-body">
+                    <div class="chart">
+                        <div class="amchart" id="chartPie1maintenance"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-lg-6">
+            <div class="card">
+                <div class="card-header bg-secondary">
+                    <h3 class="m-0">Assets Maintenance per Month</h3>
+                </div>
+                <div class="card-body">
+                    <div class="chart">
+                        <div class="amchart" id="chartbar1maintenance"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3 class="m-0">Maintenance</h3>
+
+    <div class="row">
+        <div class="col-md-12 col-lg-6">
+            <div class="card">
+                <div class="card-header bg-secondary">
+                    <h6 class="h2 text-dark d-inline-block mb-0">Asset Damage Complaints</h6>
+                </div>
+                <div class="card-body">
+                    <div class=" form-group">
+                        <label class=" form-control-label" for="example4cols3Input">
+                          Equipment No. Series
+                        </label>
+            
+                        <input
+                          class=" form-control"
+                          id="example4cols3Input"
+                          placeholder="Equipment No. Series"
+                          type="text"
+                        />
+                    </div>
+                    <div class=" form-group">
+                        <label class=" form-control-label" for="example4cols3Input">
+                            Name of Reporter
+                        </label>
+            
+                        <input
+                          class=" form-control"
+                          id="example4cols3Input"
+                          placeholder="Name of Reporter"
+                          type="text"
+                        />
+                    </div>
+                    <div class=" form-group">
+                        <label class=" form-control-label" for="example4cols3Input">
+                            Type of Damage
+                        </label>
+            
+                        <select class=" form-control" id="exampleFormControlSelect1">
+                          <option> 1 </option>
+                          <option> 2 </option>
+                          <option> 3 </option>
+                          <option> 4 </option>
+                        </select>
+                    </div>
+                    <div class=" form-group">
+                        <label class=" form-control-label" for="example4cols3Input">
+                          Date
+                        </label>
+            
+                        <input
+                            class=" form-control"
+                            id="example-date-input"
+                            type="date"
+                            value="2020-01-01"
+                        />
+                    </div>
+                    <div class="text-right">
+                        <button class="btn btn-default" type="button">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-lg-6">
+            <div class="card">
+                <div class="card-header bg-secondary">
+                    <h6 class="h2 text-dark d-inline-block mb-0">Maintenance of Repairs</h6>
+                </div>
+                <div class="card-body">
+                    <div class=" form-group">
+                        <label class=" form-control-label" for="example4cols3Input">
+                          Maintenance Name
+                        </label>
+            
+                        <input
+                          class=" form-control"
+                          id="example4cols3Input"
+                          placeholder="Iventory Name"
+                          type="text"
+                        />
+                    </div>
+                    <div class=" form-group">
+                        <label class=" form-control-label" for="example4cols3Input">
+                            Equipment No. Series
+                        </label>
+            
+                        <input
+                          class=" form-control"
+                          id="example4cols3Input"
+                          placeholder="Equipment No. Series"
+                          type="text"
+                        />
+                    </div>
+                    <div class=" form-group">
+                        <label class=" form-control-label" for="example4cols3Input">
+                            Type of Damage
+                        </label>
+            
+                        <select class=" form-control" id="exampleFormControlSelect1">
+                          <option> 1 </option>
+                          <option> 2 </option>
+                          <option> 3 </option>
+                          <option> 4 </option>
+                        </select>
+                    </div>
+                    <div class=" form-group">
+                        <label class=" form-control-label" for="example4cols3Input">
+                          Date
+                        </label>
+            
+                        <input
+                            class=" form-control"
+                            id="example-date-input"
+                            type="date"
+                            value="2020-01-01"
+                        />
+                    </div>
+                    <div class="text-right">
+                        <button class="btn btn-default" type="button">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class=" card">
+        <div class=" card-header">
+          <h3 class=" mb-0">List of Maintenance Assets</h3>
+
+          <!-- <p class=" text-sm mb-0">
+            This is an exmaple of datatable using the well known ngx-datatable
+            plugin. This is a minimal setup in order to get started fast.
+          </p> -->
+        </div>
+        <div class="dataTables_wrapper py-4">
+            <div class="row">
+              <div class="col-sm-12 col-md-6">
+                <div class="dataTables_length" id="datatable_length">
+                  <label>
+                    Show
+                    <select
+                      name="datatable_length"
+                      aria-controls="datatable"
+                      class="form-control form-control-sm"
+                      (change)="entriesChange($event)"
+                    >
+                      <option value="10" [selected]="entries == 10">10</option>
+                      <option value="25" [selected]="entries == 25">25</option>
+                      <option value="50" [selected]="entries == 50">50</option>
+                      <option value="-1" [selected]="entries == -1">All</option>
+                    </select>
+                    entries
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <div id="datatable_filter" class="dataTables_filter">
+                  <label>
+                    <input
+                      type="search"
+                      class="form-control form-control-sm"
+                      placeholder="Search records"
+                      aria-controls="datatable"
+                      (keyup)="filterTable($event)"
+                    />
+                  </label>
+                </div>
+              </div>
+            </div>
+  
+            <ngx-datatable
+              class="bootstrap selection-cell"
+              [columnMode]="'force'"
+              [headerHeight]="50"
+              [footerHeight]="50"
+              [rowHeight]="'auto'"
+              [limit]="entries != -1 ? entries : undefined"
+              [rows]="temp"
+              (activate)="onActivate($event)"
+            >
+                <ngx-datatable-column name="No">
+                    <ng-template
+                    let-rowIndex="rowIndex"
+                    let-row="row"
+                    ngx-datatable-cell-template
+                    >
+                    <strong>{{ rowIndex + 1 }}</strong>
+                    </ng-template>
+                </ngx-datatable-column>
+                <!-- <ngx-datatable-column name="No." >
+                    <ng-template let-row="row" ngx-datatable-cell-template>
+                    {{row.no}}
+                    </ng-template>
+                </ngx-datatable-column> -->
+                <ngx-datatable-column name="Asset Name" >
+                    <ng-template let-row="row" ngx-datatable-cell-template>
+                    {{row.assetname}}
+                    </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column name="Asset No. Siries" >
+                    <ng-template let-row="row" ngx-datatable-cell-template>
+                    {{row.assetno}}
+                    </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column name="Type of Damage" >
+                    <ng-template let-row="row" ngx-datatable-cell-template>
+                    {{row.typedamage}}
+                    </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column name="Date"></ngx-datatable-column>
+
+                <ngx-datatable-column>
+                    <ng-template ngx-datatable-header-template>
+                      <span>Status</span>
+                    </ng-template>
+                    <ng-template let-row="row" ngx-datatable-cell-template>
+                      <span
+                        *ngIf="row.status == 'pending'"
+                        class="badge badge-pill badge-warning"
+                        >pending</span
+                      >
+                      <span
+                        *ngIf="row.status == 'done'"
+                        class="badge badge-pill badge-success"
+                        >done</span
+                      >                        
+                    </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column>
+                    <ng-template ngx-datatable-header-template>
+                      <span>Action</span>
+                    </ng-template>
+                    <ng-template let-row="row" ngx-datatable-cell-template>
+                      <button
+                        *ngIf="row.status == 'pending'"
+                        class="btn btn-success" 
+                        id= "btn-danger"
+                        type="button"
+                        >Done</button
+                      >
+                      <!-- <button class="btn btn-default" type="button">Submit</button> -->
+                      <button
+                        *ngIf="row.status == 'done'"
+                        class="btn btn-success"
+                        disabled
+                        id= "btn-danger"
+                        type="button"
+                        >Done</button
+                      >                        
+                    </ng-template>
+                </ngx-datatable-column>  
+    
+                <!-- <ngx-datatable-column name="Action">
+                    <ng-template let-row="row" ngx-datatable-cell-template>
+                        <button class=" btn btn-icon btn-success btn-sm" type="button" title="View">
+                            <span class=" btn-inner--icon"> <i class=" far fa-eye"> </i> </span>
+                        </button>
+                        <button class=" btn btn-icon btn-danger btn-sm" type="button" title="Delete">
+                            <span class=" btn-inner--icon"> <i class=" fas fa-trash"> </i> </span>
+                        </button>
+                    </ng-template>
+                </ngx-datatable-column> -->
+            </ngx-datatable>
+          </div>
+    </div>
+
+
+</div>

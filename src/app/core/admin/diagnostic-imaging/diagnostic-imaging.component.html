@@ -1,0 +1,376 @@
+<div class="header pb-6">
+    <div class="container-fluid">
+        <div class="header-body">
+            <div class="row align-items-center py-4">
+                <div class="col-lg-6 col-7">
+                    <h6 class="h2 text-dark d-inline-block mb-0">Diagnostic Imaging</h6>
+
+                    <nav aria-label="breadcrumb" class=" d-none d-md-inline-block ml-md-4">
+                        <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                            <li class=" breadcrumb-item">
+                                <a href="javascript:void(0)"> <i class="fas fa-diagnoses text-dark"> </i> </a>
+                            </li>
+                            <li aria-current="page" class="breadcrumb-item active">
+                                Diagnostic Imaging
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="col-lg-6 col-5 text-right">
+                  <h3>{{today | date:'fullDate'}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid mt--6">
+    
+    <div class="row">
+        <div class="col-xl-8">
+            <div class="card">
+                <div class="card-header bg-secondary">
+                    <h3 class="m-0">Total Read</h3>
+                </div>
+                <div class="card-body">
+                    <div class="chart">
+                        <div class="amchart" id="chartpiediagimg1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4">
+            <div class=" card">
+                <div class=" card-header"><h5 class=" h3 mb-0">Diagnostic Room</h5></div>
+        
+                <div class=" card-body">
+                  <ul class=" list-group list-group-flush list my--3">
+                    <li class=" list-group-item px-0">
+                      <div class=" row align-items-center">
+                        <div class=" col-auto">
+                          <a class=" avatar rounded-circle" href="javascript:void(0)">
+                            <img
+                              alt="Image placeholder"
+                              src="assets/img/theme/bootstrap.jpg"
+                            />
+                          </a>
+                        </div>
+        
+                        <div class=" col">
+                            <div class=" col ml--2">
+                                <h4 class=" mb-0">
+                                  <a href="javascript:void(0)"> Room 1 </a>
+                                </h4>
+              
+                                <span class=" text-success"> ● </span>
+              
+                                <small> Online </small>
+                              </div>
+                        </div>
+                      </div>
+                    </li>
+        
+                    <li class=" list-group-item px-0">
+                      <div class=" row align-items-center">
+                        <div class=" col-auto">
+                          <a class=" avatar rounded-circle" href="javascript:void(0)">
+                            <img
+                              alt="Image placeholder"
+                              src="assets/img/theme/angular.jpg"
+                            />
+                          </a>
+                        </div>
+        
+                        <div class=" col">
+                            <div class=" col ml--2">
+                                <h4 class=" mb-0">
+                                  <a href="javascript:void(0)"> Room 2 </a>
+                                </h4>
+              
+                                <span class=" text-warning"> ● </span>
+              
+                                <small> Operation </small>
+                              </div>
+                        </div>
+                      </div>
+                    </li>
+        
+                    <li class=" list-group-item px-0">
+                      <div class=" row align-items-center">
+                        <div class=" col-auto">
+                          <a class=" avatar rounded-circle" href="javascript:void(0)">
+                            <img
+                              alt="Image placeholder"
+                              src="assets/img/theme/sketch.jpg"
+                            />
+                          </a>
+                        </div>
+        
+                        <div class=" col">
+                            <div class=" col ml--2">
+                                <h4 class=" mb-0">
+                                  <a href="javascript:void(0)"> Room 3 </a>
+                                </h4>
+              
+                                <span class=" text-danger"> ● </span>
+              
+                                <small> Not available </small>
+                              </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class=" list-group-item px-0">
+                        <div class=" row align-items-center">
+                          <div class=" col-auto">
+                            <a class=" avatar rounded-circle" href="javascript:void(0)">
+                              <img
+                                alt="Image placeholder"
+                                src="assets/img/theme/bootstrap.jpg"
+                              />
+                            </a>
+                          </div>
+          
+                          <div class=" col">
+                              <div class=" col ml--2">
+                                  <h4 class=" mb-0">
+                                    <a href="javascript:void(0)"> Room 4 </a>
+                                  </h4>
+                
+                                  <span class=" text-success"> ● </span>
+                
+                                  <small> Online </small>
+                                </div>
+                          </div>
+                        </div>
+                      </li>
+                  </ul>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <div class="col-lg-12 col-4 text-right">
+        <button class="btn btn-default" type="button">Submit New</button>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header bg-secondary">
+                        <h6 class="h2 text-dark d-inline-block mb-0">Find File</h6>
+    
+                    
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class=" col-sm-6 col-md-3">
+                            <div class=" form-group">
+                              <label class=" form-control-label" for="example-date-input">
+                                Date Registered
+                              </label>
+                  
+                              <input
+                                class=" form-control"
+                                id="example-date-input"
+                                type="date"
+                                value="2018-11-23"
+                              />
+                            </div>
+                          </div>
+                  
+                          <div class=" col-sm-6 col-md-3">
+                            <div class=" form-group">
+                              <label class=" form-control-label" for="example4cols2Input">
+                                Category
+                              </label>
+                  
+                              <input
+                                class=" form-control"
+                                id="example4cols2Input"
+                                placeholder="Category"
+                                type="text"
+                              />
+                            </div>
+                          </div>
+                  
+                          <div class=" col-sm-6 col-md-3">
+                            <div class=" form-group">
+                              <label class=" form-control-label" for="exampleFormControlSelect3">
+                                Diagnostic Room
+                              </label>
+                  
+                              <select class=" form-control" id="exampleFormControlSelect3">
+                                <option> Room 1 </option>
+              
+                                <option> Room 2 </option>
+              
+                                <option> Room 3 </option>
+              
+                                <option> Room 4 </option>
+              
+                              </select>
+                            </div>
+                          </div>
+                  
+                        <div class="col-md-12 col-lg-2 d-flex align-items-center">
+                            <button class="btn btn-default" type="button">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <div class=" card">
+        <!-- <div class=" card-header">
+          <h3 class=" mb-0">Ngx Datatables</h3>
+
+          <p class=" text-sm mb-0">
+            This is an exmaple of datatable using the well known ngx-datatable
+            plugin. This is a minimal setup in order to get started fast.
+          </p>
+        </div> -->
+        <div class="dataTables_wrapper py-4">
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <div class="dataTables_length" id="datatable_length">
+                <label>
+                  Show
+                  <select
+                    name="datatable_length"
+                    aria-controls="datatable"
+                    class="form-control form-control-sm"
+                    (change)="entriesChange($event)"
+                  >
+                    <option value="10" [selected]="entries == 10">10</option>
+                    <option value="25" [selected]="entries == 25">25</option>
+                    <option value="50" [selected]="entries == 50">50</option>
+                    <option value="-1" [selected]="entries == -1">All</option>
+                  </select>
+                  entries
+                </label>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+              <div id="datatable_filter" class="dataTables_filter">
+                <label>
+                  <input
+                    type="search"
+                    class="form-control form-control-sm"
+                    placeholder="Search records"
+                    aria-controls="datatable"
+                    (keyup)="filterTable($event)"
+                  />
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <ngx-datatable
+            class="bootstrap selection-cell"
+            [columnMode]="'force'"
+            [headerHeight]="50"
+            [footerHeight]="50"
+            [rowHeight]="'auto'"
+            [limit]="entries != -1 ? entries : undefined"
+            [rows]="temp"
+            (activate)="onActivate($event)"
+          >
+                <ngx-datatable-column name="Patient ID" >
+                    <ng-template let-row="row" ngx-datatable-cell-template>
+                    {{row.patientId}}
+                    </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column name="Patient Name" >
+                    <ng-template let-row="row" ngx-datatable-cell-template>
+                    {{row.patientName}}
+                    </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column name="Type"></ngx-datatable-column>
+                <ngx-datatable-column name="Location"></ngx-datatable-column>
+        
+                <ngx-datatable-column name="Action">
+                    <ng-template let-row="row" ngx-datatable-cell-template>
+                        <button class=" btn btn-icon btn-success btn-sm" type="button" title="View">
+                            <span class=" btn-inner--icon"> <i class=" far fa-eye"> </i> </span>
+                        </button>
+                        <button class=" btn btn-icon btn-danger btn-sm" type="button" title="Delete">
+                            <span class=" btn-inner--icon"> <i class=" fas fa-trash"> </i> </span>
+                        </button>
+                    </ng-template>
+                </ngx-datatable-column>
+          </ngx-datatable>
+        </div>
+    </div>
+</div>
+
+<ng-template #submitNewPerson>
+    <div class="modal-header bg-default">
+        <h6 class="modal-title text-white my-auto" id="modal-title-default">
+            Submit New User
+        </h6>
+
+        <button
+            aria-label="Close"
+            class="close"
+            data-dismiss="modal"
+            type="button"
+            (click)="closeModal()"
+        >
+            <span aria-hidden="true" class="text-white my-auto"> × </span>
+        </button>
+    </div>
+
+    <div class="modal-body">
+        <form [formGroup]="registerForm">
+            <div class="form-group">
+                <label class="form-control-label">Name</label>
+                <input 
+                  class="form-control"
+                  placeholder="Enter name"
+                  formControlName="name"
+                  type="text"
+                >
+                <ng-container *ngFor="let message of registerFormMessages.name">
+                    <div *ngIf="registerForm.get('name').hasError(message.type) && (registerForm.get('name').dirty || registerForm.get('name').touched)">
+                        <p class="error-message"><span>{{ message.message }}</span></p>
+                    </div>
+                </ng-container>
+            </div>
+            <div class="form-group">
+                <label class="form-control-label">Email</label>
+                <input 
+                  class="form-control"
+                  placeholder="Enter email"
+                  formControlName="email"
+                  type="text"
+                >
+                <ng-container *ngFor="let message of registerFormMessages.email">
+                    <div *ngIf="registerForm.get('email').hasError(message.type) && (registerForm.get('email').dirty || registerForm.get('email').touched)">
+                        <p class="error-message"><span>{{ message.message }}</span></p>
+                    </div>
+                </ng-container>
+            </div>
+        </form>
+    </div>
+
+    <div class="modal-footer">
+        <button 
+            class="btn btn-success"
+            type="button"
+            (click)="confirm()"
+            [disabled]="!registerForm.valid"
+        >
+            Create
+        </button>
+
+        <button
+            class="btn btn-outline-danger ml-auto"
+            data-dismiss="modal"
+            type="button"
+            (click)="closeModal()"
+        >
+            Close
+        </button>
+    </div>
+</ng-template>

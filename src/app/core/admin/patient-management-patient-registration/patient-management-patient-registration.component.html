@@ -1,0 +1,468 @@
+<div class="header pb-6">
+  <div class="container-fluid">
+      <div class="header-body">
+          <div class="row align-items-center py-4">
+              <div class="col-lg-6 col-7">
+                  <h6 class="h2 text-dark d-inline-block mb-0">Patient Registration</h6>
+
+                  <nav aria-label="breadcrumb" class=" d-none d-md-inline-block ml-md-4">
+                      <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                          <li class=" breadcrumb-item">
+                              <a href="javascript:void(0)"> <i class="fas fa-file-invoice text-dark"> </i> </a>
+                          </li>
+                          <li aria-current="page" class="breadcrumb-item active">
+                              Patient Registration
+                          </li>
+                      </ol>
+                  </nav>
+              </div>
+              <div class="col-lg-6 col-5 text-right">
+                <h3>{{today | date:'fullDate'}}</h3>
+              </div>
+          </div>
+
+      </div>
+  </div>
+</div>
+
+<div class="container-fluid mt--6">
+	
+  <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header bg-secondary">
+              <h6 class="h2 text-dark d-inline-block mb-0">Register New Patient</h6>
+              <div class="text-right">
+                <button class="btn btn-default" type="button">Register New</button>
+            </div> 
+          </div>
+          <div class="card-body">
+              <div class="row">
+                <div class=" col-6 col-md-4">
+                  <div class=" form-group">
+                    <label class=" form-control-label" for="example4cols3Input">
+                      Title
+                    </label>
+        
+                    <select class=" form-control" id="exampleFormControlSelect1">
+                      <option> Mr. </option>
+    
+                      <option> Ms. </option>
+                    </select>
+                  </div>
+                </div>
+                <div class=" col-12 col-md-8">
+                  <div class=" form-group">
+                    <label class=" form-control-label" for="example4cols3Input">
+                      Fullname
+                    </label>
+        
+                    <input
+                      class=" form-control"
+                      id="example4cols3Input"
+                      placeholder="Fullname"
+                      type="text"
+                    />
+                  </div>
+                </div>
+                <div class=" col-6">
+                  <div class=" form-group">
+                    <label class=" form-control-label" for="example4cols3Input">
+                      Old NRIC
+                    </label>
+        
+                    <input
+                      class=" form-control"
+                      id="example4cols3Input"
+                      placeholder="xxxxxxx"
+                      type="text"
+                    />
+                  </div>
+                </div>
+                <div class=" col-6">
+                  <div class=" form-group">
+                    <label class=" form-control-label" for="example4cols3Input">
+                      New NRIC
+                    </label>
+        
+                    <input
+                      class=" form-control"
+                      id="example4cols3Input"
+                      placeholder="xxxxxx-xx-xxxx"
+                      type="text"
+                    />
+                  </div>
+                </div>
+                <div class=" col-6">
+                  <div class=" form-group">
+                    <label class=" form-control-label" for="example4cols3Input">
+                      Passport No.
+                    </label>
+        
+                    <input
+                      class=" form-control"
+                      id="example4cols3Input"
+                      placeholder="A00000000"
+                      type="text"
+                    />
+                  </div>
+                </div>
+                <div class=" col-6">
+                  <div class=" form-group">
+                    <label class=" form-control-label" for="example4cols3Input">
+                      Date of Birth
+                    </label>
+        
+                    <input
+                      class=" form-control"
+                      id="example-date-input"
+                      type="date"
+                      value="2020-01-01"
+                  />
+                  </div>
+                </div>
+                <div class=" col-6">
+                  <div class=" form-group">
+                    <label class=" form-control-label" for="example4cols3Input">
+                      Age
+                    </label>
+        
+                    <input
+                      class=" form-control"
+                      id="example4cols3Input"
+                      placeholder="Age"
+                      type="text"
+                    />
+                  </div>
+                </div>
+                <div class=" col-6">
+                  <div class=" form-group">
+                    <label class=" form-control-label" for="example4cols3Input">
+                      Marital Status
+                    </label>
+        
+                    <select class=" form-control" id="exampleFormControlSelect1">
+                      <option> Single </option>
+                      <option> Married </option>
+                      <option> Widowed </option>
+                      <option> Separated </option>
+                      <option> Divorced </option>
+                    </select>
+                  </div>
+                </div>
+                <div class=" col-6 col-md-4">
+                  <div class=" form-group">
+                    <label class=" form-control-label" for="example4cols3Input">
+                      Gender
+                    </label>
+        
+                    <select class=" form-control" id="exampleFormControlSelect1">
+                      <option> Male </option>
+    
+                      <option> Female </option>
+                    </select>
+                  </div>
+                </div>
+                <div class=" col-6 col-md-4">
+                  <div class=" form-group">
+                    <label class=" form-control-label" for="example4cols3Input">
+                      Nationality
+                    </label>
+        
+                    <select class=" form-control" id="exampleFormControlSelect1">
+                      <option> Malaysian </option>
+    
+                      <option> Foreigner </option>
+                    </select>
+                  </div>
+                </div>
+                <div class=" col-6 col-md-4">
+                  <div class=" form-group">
+                    <label class=" form-control-label" for="example4cols3Input">
+                      Race
+                    </label>
+        
+                    <select class=" form-control" id="exampleFormControlSelect1">
+                      <option> Malay </option>
+                      <option> Chinese </option>
+                      <option> Indian </option>
+                      <option> Others </option>
+                    </select>
+                  </div>
+                </div>
+                <div class=" col-6 col-md-4">
+                  <div class=" form-group">
+                    <label class=" form-control-label" for="example4cols3Input">
+                      Ethnicity
+                    </label>
+        
+                    <select class=" form-control" id="exampleFormControlSelect1">
+                      <option> Malay </option>
+                      <option> Chinese </option>
+                      <option> Indian </option>
+                      <option> Others </option>
+                    </select>
+                  </div>
+                </div>
+                <div class=" col-6 col-md-4">
+                  <div class=" form-group">
+                    <label class=" form-control-label" for="example4cols3Input">
+                      Religion
+                    </label>
+        
+                    <select class=" form-control" id="exampleFormControlSelect1">
+                      <option> Islam </option>
+                      <option> Buddhism </option>
+                      <option> Christianity </option>
+                      <option> Hinduism</option>
+                      <option> Others </option>
+                    </select>
+                  </div>
+                </div>
+                <div class=" col-6 col-md-4">
+                  <div class=" form-group">
+                    <label class=" form-control-label" for="example4cols3Input">
+                      Education Status
+                    </label>
+        
+                    <select class=" form-control" id="exampleFormControlSelect1">
+                      <option> Primary Education </option>
+                      <option> Secondary Education </option>
+                      <option> Higher Education </option>
+                    </select>
+                  </div>
+                </div>
+                <div class=" col-6">
+                  <div class=" form-group">
+                    <label class=" form-control-label" for="example4cols3Input">
+                      Mobile No.
+                    </label>
+        
+                    <input
+                      class=" form-control"
+                      id="example-tel-input"
+                      type="tel"
+                      value="012-3456789"
+                    />
+                  </div>
+                </div>
+                <div class=" col-6">
+                  <div class=" form-group">
+                    <label class=" form-control-label" for="example4cols3Input">
+                      Email Address
+                    </label>
+        
+                    <input
+                      class=" form-control"
+                      id="example-email-input"
+                      type="email"
+                      value="abcde@example.com"
+                    />
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header bg-secondary">
+            <h3 class="m-0">Patients Monthly Chart</h3>
+        </div>
+        <div class="card-body">
+            <div class="chart">
+                <div class="amchart" id="chartLineAdmission"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="row">
+      <div class="col-md-12 col-lg-6">
+          <div class="card">
+              <div class="card-header bg-secondary">
+                  <h3 class="m-0">Patients Category</h3>
+              </div>
+              <div class="card-body">
+                  <div class="chart">
+                      <div class="amchart" id="chartPie1registration"></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-12 col-lg-6">
+          <div class="card">
+              <div class="card-header bg-secondary">
+                  <h3 class="m-0">Patients by Age Chart</h3>
+              </div>
+              <div class="card-body">
+                  <div class="chart">
+                      <div class="amchart" id="chart3DCylinder1registration"></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="row">
+      <div class="col-md-12">
+          <div class="card">
+              <div class="card-header bg-secondary">
+                  <h6 class="h2 text-dark d-inline-block mb-0">Find Patient</h6> 
+              </div>
+              <div class="card-body">
+                  <div class="row">
+                      <div class=" col-sm-6 col-md-3">
+                          <div class=" form-group">
+                            <label class=" form-control-label" for="example4cols1Input">
+                              Date Registered
+                            </label>
+                
+                            <input
+                              class=" form-control"
+                              id="example4cols1Input"
+                              placeholder="DD/MM/YYYY"
+                              type="text"
+                            />
+                          </div>
+                        </div>
+                
+                        <div class=" col-sm-6 col-md-3">
+                          <div class=" form-group">
+                            <label class=" form-control-label" for="example4cols2Input">
+                              Gender
+                            </label>
+                
+                            <select class=" form-control" id="exampleFormControlSelect1">
+                              <option> Male </option>
+            
+                              <option> Female </option>
+                            </select>
+                          </div>
+                        </div>
+                
+                        <div class=" col-sm-6 col-md-3">
+                          <div class=" form-group">
+                            <label class=" form-control-label" for="example4cols3Input">
+                              Type
+                            </label>
+                
+                            <input
+                              class=" form-control"
+                              id="example4cols3Input"
+                              placeholder="Type"
+                              type="text"
+                            />
+                          </div>
+                        </div>
+                
+                      <div class="col-md-12 col-lg-2 d-flex align-items-center">
+                          <button class="btn btn-default" type="button">Search</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div> 
+
+  <!-- <div class="col-lg-12 col-4 text-right">
+      <button class="btn btn-default" type="button">Register New</button>
+  </div> -->
+
+  <div class=" card">
+      <!-- <div class=" card-header">
+        <h3 class=" mb-0">Ngx Datatables</h3>
+
+        <p class=" text-sm mb-0">
+          This is an exmaple of datatable using the well known ngx-datatable
+          plugin. This is a minimal setup in order to get started fast.
+        </p>
+      </div> -->
+      <div class="dataTables_wrapper py-4">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <div class="dataTables_length" id="datatable_length">
+              <label>
+                Show
+                <select
+                  name="datatable_length"
+                  aria-controls="datatable"
+                  class="form-control form-control-sm"
+                  (change)="entriesChange($event)"
+                >
+                  <option value="5" [selected]="entries == 5">5</option>
+                  <option value="10" [selected]="entries == 10">10</option>
+                  <option value="15" [selected]="entries == 15">15</option>
+                  <option value="-1" [selected]="entries == -1">All</option>
+                </select>
+                entries
+              </label>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <div id="datatable_filter" class="dataTables_filter">
+              <label>
+                <input
+                  type="search"
+                  class="form-control form-control-sm"
+                  placeholder="Search records"
+                  aria-controls="datatable"
+                  (keyup)="filterTable($event)"
+                />
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <ngx-datatable
+          class="bootstrap selection-cell"
+          [columnMode]="'force'"
+          [headerHeight]="50"
+          [footerHeight]="50"
+          [rowHeight]="'auto'"
+          [limit]="entries != -1 ? entries : undefined"
+          [rows]="temp"
+          (activate)="onActivate($event)"
+        >
+              <ngx-datatable-column name="Adult Male" >
+                  <ng-template let-row="row" ngx-datatable-cell-template>
+                  {{row.adultmale}}
+                  </ng-template>
+              </ngx-datatable-column>
+              <ngx-datatable-column name="Adult Female" >
+                  <ng-template let-row="row" ngx-datatable-cell-template>
+                  {{row.adultfemale}}
+                  </ng-template>
+              </ngx-datatable-column>
+              <ngx-datatable-column name="Kids Male" >
+                  <ng-template let-row="row" ngx-datatable-cell-template>
+                  {{row.kidsmale}}
+                  </ng-template>
+              </ngx-datatable-column>
+              <ngx-datatable-column name="Adult Male" >
+                  <ng-template let-row="row" ngx-datatable-cell-template>
+                  {{row.kidsfemale}}
+                  </ng-template>
+              </ngx-datatable-column>
+              <ngx-datatable-column name="Wards"></ngx-datatable-column>
+              <!-- <ngx-datatable-column name="Doctor"></ngx-datatable-column> -->
+      
+              <ngx-datatable-column name="Action">
+                  <ng-template let-row="row" ngx-datatable-cell-template>
+                      <button class=" btn btn-icon btn-success btn-sm" type="button" title="View">
+                          <span class=" btn-inner--icon"> <i class=" far fa-eye"> </i> </span>
+                      </button>
+                      <button class=" btn btn-icon btn-danger btn-sm" type="button" title="Delete">
+                          <span class=" btn-inner--icon"> <i class=" fas fa-trash"> </i> </span>
+                      </button>
+                  </ng-template>
+              </ngx-datatable-column>
+        </ngx-datatable>
+      </div>
+  </div>
+
+</div>

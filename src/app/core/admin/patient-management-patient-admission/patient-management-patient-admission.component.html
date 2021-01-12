@@ -1,0 +1,557 @@
+<div class="header pb-6">
+    <div class="container-fluid">
+        <div class="header-body">
+            <div class="row align-items-center py-4">
+                <div class="col-lg-6 col-7">
+                    <h6 class="h2 text-dark d-inline-block mb-0">Patient Admission</h6>
+
+                    <nav aria-label="breadcrumb" class=" d-none d-md-inline-block ml-md-4">
+                        <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                            <li class=" breadcrumb-item">
+                                <a href="javascript:void(0)"> <i class="fas fa-file-invoice text-dark"> </i> </a>
+                            </li>
+                            <li aria-current="page" class="breadcrumb-item active">
+                                Patient Admission
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="col-lg-6 col-5 text-right">
+                  <h3>{{today | date:'fullDate'}}</h3>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid mt--6">
+	
+    <div class="row">
+        <div class="col-md-12 col-lg-6">
+            <div class="card">
+                <div class="card-header bg-secondary">
+                    <h3 class="m-0">Beds Availability</h3>
+                </div>
+                <div class="card-body">
+                    <div class="chart">
+                        <div class="amchart" id="chart3DPie1admission"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-lg-6">
+            <div class="card">
+                <div class="card-header bg-secondary">
+                    <h3 class="m-0">Average Registered Patients by Month Chart</h3>
+                </div>
+                <div class="card-body">
+                    <div class="chart">
+                        <div class="amchart" id="chartLollipop1admission"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12 col-lg-6">
+            <div class="card">
+                <div class="card-header bg-secondary">
+                    <h3 class="m-0">Patients Category</h3>
+                </div>
+                <div class="card-body">
+                    <div class="chart">
+                        <div class="amchart" id="chartPie1admission"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-lg-6">
+            <div class="card">
+                <div class="card-header bg-secondary">
+                    <h3 class="m-0">Patients by Age Chart</h3>
+                </div>
+                <div class="card-body">
+                    <div class="chart">
+                        <div class="amchart" id="chart3DCylinder1admission"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header bg-secondary">
+                    <h6 class="h2 text-dark d-inline-block mb-0">Find Patient</h6> 
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class=" col-sm-6 col-md-3">
+                            <div class=" form-group">
+                              <label class=" form-control-label" for="example-date-input">
+                                Registered Date
+                              </label>
+                  
+                              <input
+                                  class=" form-control"
+                                  id="example-date-input"
+                                  type="date"
+                                  value="2020-01-01"
+                              />
+                            </div>
+                          </div>
+                  
+                          <div class=" col-sm-6 col-md-3">
+                            <div class=" form-group">
+                              <label class=" form-control-label" for="example4cols2Input">
+                                Gender
+                              </label>
+                  
+                              <select class=" form-control" id="exampleFormControlSelect1">
+                                <option> Male </option>
+              
+                                <option> Female </option>
+                              </select>
+                            </div>
+                          </div>
+                  
+                          <div class=" col-sm-6 col-md-3">
+                            <div class=" form-group">
+                              <label class=" form-control-label" for="example4cols3Input">
+                                Ward
+                              </label>
+                  
+                              <input
+                                class=" form-control"
+                                id="example4cols3Input"
+                                placeholder="Ward"
+                                type="text"
+                              />
+                            </div>
+                          </div>
+                  
+                        <div class="col-md-12 col-lg-2 d-flex align-items-center">
+                            <button class="btn btn-default" type="button">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <div class="col-sm-6 col-md-2 text-right" >
+      <button
+        class=" btn btn-block btn-default mb-3"
+        data-target="#modal-default"
+        data-toggle="modal"
+        type="button"
+        (click)="openDefaultModal(modalDefault)"
+      >
+        Register New
+      </button>
+      <!-- <button class="btn btn-default" data-toggle="modal" data-target="#admissionModal" type="button">Register New</button> -->
+      <ng-template #modalDefault>
+        <div class=" modal-header">
+          <h6 class=" modal-title" id="modal-title-default">
+            Regiser New Patient
+          </h6>
+
+          <button
+            aria-label="Close"
+            class=" close"
+            data-dismiss="modal"
+            type="button"
+            (click)="defaultModal.hide()"
+          >
+            <span aria-hidden="true"> × </span>
+          </button>
+        </div>
+
+        <div class=" modal-body">
+          <div class=" col-12">
+            <div class=" form-group">
+              <label class=" form-control-label" for="example4cols3Input">
+                Patient's Name
+              </label>
+  
+              <input
+                class=" form-control"
+                id="example4cols3Input"
+                placeholder="Patient's Name"
+                type="text"
+              />
+            </div>
+          </div>
+          <div class=" col-12">
+            <div class=" form-group">
+              <label class=" form-control-label" for="example4cols3Input">
+                Patient's NRIC
+              </label>
+  
+              <input
+                class=" form-control"
+                id="example4cols3Input"
+                placeholder="Patient's NRIC"
+                type="text"
+              />
+            </div>
+          </div>
+          <div class=" col-12">
+            <div class=" form-group">
+              <label class=" form-control-label" for="exampleFormControlSelect1">
+                Arrival Mode
+              </label>
+  
+              <select class=" form-control" id="exampleFormControlSelect1">
+                <option> 1 </option>
+
+                <option> 2 </option>
+                <option> 3 </option>
+              </select>
+            </div>
+          </div>
+          <div class=" col-12">
+            <div class=" form-group">
+              <label class=" form-control-label" for="exampleFormControlSelect1">
+                Medical Legal Status
+              </label>
+  
+              <select class=" form-control" id="exampleFormControlSelect1">
+                <option> 1 </option>
+
+                <option> 2 </option>
+                <option> 3 </option>
+              </select> 
+            </div>
+          </div>
+          <div class=" col-12">
+            <div class=" form-group">
+              <label class=" form-control-label" for="exampleFormControlSelect1">
+                Ambulatory Status
+              </label>
+  
+              <select class=" form-control" id="exampleFormControlSelect1">
+                <option> 1 </option>
+
+                <option> 2 </option>
+                <option> 3 </option>
+              </select>
+            </div>
+          </div>
+          <div class=" col-12">
+            <div class=" form-group">
+              <label class=" form-control-label" for="example4cols3Input">
+                Associated Visit
+              </label>
+  
+              <input
+                class=" form-control"
+                id="example4cols3Input"
+                placeholder="Patient's NRIC"
+                type="text"
+              />
+            </div>
+          </div>
+          <div class=" col-12">
+            <div class=" form-group">
+              <label class=" form-control-label" for="example4cols3Input">
+                Comments
+              </label>
+  
+              <input
+                class=" form-control"
+                id="example4cols3Input"
+                placeholder="Patient's NRIC"
+                type="text"
+              />
+            </div>
+          </div>
+          <div class=" col-12">
+            <div class=" form-group">
+              <label class=" form-control-label" for="example4cols3Input">
+                Primary Service
+              </label>
+  
+              <select class=" form-control" id="exampleFormControlSelect1">
+                <option> 1 </option>
+
+                <option> 2 </option>
+                <option> 3 </option>
+              </select>
+            </div>
+          </div>
+          <div class=" col-12">
+            <div class=" form-group">
+              <label class=" form-control-label" for="example4cols3Input">
+                Visit Reason
+              </label>
+  
+              <input
+                class=" form-control"
+                id="example4cols3Input"
+                placeholder="Patient's NRIC"
+                type="text"
+              />
+            </div>
+          </div>
+          <div class=" col-12">
+            <div class=" form-group">
+              <label class=" form-control-label" for="example4cols3Input">
+                Assign Service/ Care Provider
+              </label>
+  
+              <select class=" form-control" id="exampleFormControlSelect1">
+                <option> 1 </option>
+
+                <option> 2 </option>
+                <option> 3 </option>
+              </select>
+            </div>
+          </div>
+          <div class=" col-12">
+            <div class=" form-group">
+              <label class=" form-control-label" for="example4cols3Input">
+                Room
+              </label>
+  
+              <select class=" form-control" id="exampleFormControlSelect1">
+                <option> 1 </option>
+
+                <option> 2 </option>
+                <option> 3 </option>
+              </select>
+            </div>
+          </div>
+          <div class=" col-12">
+            <div class=" form-group">
+              <label class=" form-control-label" for="example4cols3Input">
+                Bed No.
+              </label>
+  
+              <select class=" form-control" id="exampleFormControlSelect1">
+                <option> 1 </option>
+
+                <option> 2 </option>
+                <option> 3 </option>
+              </select>
+            </div>
+          </div>
+          <div class=" col-12">
+            <div class=" form-group">
+              <label class=" form-control-label" for="example4cols3Input">
+                Status of Bed
+              </label>
+  
+              <select class=" form-control" id="exampleFormControlSelect1">
+                <option> 1 </option>
+
+                <option> 2 </option>
+                <option> 3 </option>
+              </select>
+            </div>
+          </div>
+          <div class=" col-12">
+            <div class=" form-group">
+              <label class=" form-control-label" for="example4cols3Input">
+                Housekeeper
+              </label>
+  
+              <select class=" form-control" id="exampleFormControlSelect1">
+                <option> 1 </option>
+
+                <option> 2 </option>
+                <option> 3 </option>
+              </select>
+            </div>
+          </div>
+
+          
+
+                      <!-- <div class="col-12">
+                        <div class=" form-group row">
+                          <label
+                            class=" form-control-label"
+                            for="example-time-input"
+                          >
+                            Appointment Time
+                          </label>
+
+                          <input
+                              class=" form-control"
+                              id="example-time-input"
+                              type="time"
+                              value="10:30:00"
+                            />
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class=" form-group">
+                          <label class=" form-control-label" for="example4cols3Input">
+                            Staff
+                          </label>
+              
+                          <input
+                            class=" form-control"
+                            id="example4cols3Input"
+                            placeholder="Staff"
+                            type="text"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class=" form-group">
+                          <label class=" form-control-label" for="example4cols3Input">
+                            Room
+                          </label>
+              
+                          <input
+                            class=" form-control"
+                            id="example4cols3Input"
+                            placeholder="Room"
+                            type="text"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class=" form-group">
+                          <label class=" form-control-label" for="example4cols3Input">
+                            Location
+                          </label>
+              
+                          <input
+                            class=" form-control"
+                            id="example4cols3Input"
+                            placeholder="Location"
+                            type="text"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class=" form-group">
+                          <label class=" form-control-label" for="example4cols3Input">
+                            Machine/Modality
+                          </label>
+              
+                          <input
+                            class=" form-control"
+                            id="example4cols3Input"
+                            placeholder="Machine/Modality"
+                            type="text"
+                          />
+                        </div>
+                      </div> -->
+        </div>
+
+        <div class=" modal-footer">
+          <button class=" btn btn-success" (click)="successSwal()">
+            Success alert
+          </button>
+
+          <button
+            class=" btn btn-link ml-auto"
+            data-dismiss="modal"
+            type="button"
+            (click)="defaultModal.hide()"
+          >
+            Close
+          </button>
+        </div>
+      </ng-template>
+    </div>
+
+    <div class=" card">
+        <!-- <div class=" card-header">
+          <h3 class=" mb-0">Ngx Datatables</h3>
+
+          <p class=" text-sm mb-0">
+            This is an exmaple of datatable using the well known ngx-datatable
+            plugin. This is a minimal setup in order to get started fast.
+          </p>
+        </div> -->
+        <div class="dataTables_wrapper py-4">
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <div class="dataTables_length" id="datatable_length">
+                <label>
+                  Show
+                  <select
+                    name="datatable_length"
+                    aria-controls="datatable"
+                    class="form-control form-control-sm"
+                    (change)="entriesChange($event)"
+                  >
+                    <option value="5" [selected]="entries == 5">5</option>
+                    <option value="10" [selected]="entries == 10">10</option>
+                    <option value="15" [selected]="entries == 15">15</option>
+                    <option value="-1" [selected]="entries == -1">All</option>
+                  </select>
+                  entries
+                </label>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+              <div id="datatable_filter" class="dataTables_filter">
+                <label>
+                  <input
+                    type="search"
+                    class="form-control form-control-sm"
+                    placeholder="Search records"
+                    aria-controls="datatable"
+                    (keyup)="filterTable($event)"
+                  />
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <ngx-datatable
+            class="bootstrap selection-cell"
+            [columnMode]="'force'"
+            [headerHeight]="50"
+            [footerHeight]="50"
+            [rowHeight]="'auto'"
+            [limit]="entries != -1 ? entries : undefined"
+            [rows]="temp"
+            (activate)="onActivate($event)"
+          >
+                <ngx-datatable-column name="Adult Male" >
+                    <ng-template let-row="row" ngx-datatable-cell-template>
+                    {{row.adultmale}}
+                    </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column name="Adult Female" >
+                    <ng-template let-row="row" ngx-datatable-cell-template>
+                    {{row.adultfemale}}
+                    </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column name="Kids Male" >
+                    <ng-template let-row="row" ngx-datatable-cell-template>
+                    {{row.kidsmale}}
+                    </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column name="Adult Male" >
+                    <ng-template let-row="row" ngx-datatable-cell-template>
+                    {{row.kidsfemale}}
+                    </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column name="Wards"></ngx-datatable-column>
+                <!-- <ngx-datatable-column name="Doctor"></ngx-datatable-column> -->
+        
+                <ngx-datatable-column name="Action">
+                    <ng-template let-row="row" ngx-datatable-cell-template>
+                        <button class=" btn btn-icon btn-success btn-sm" type="button" title="View">
+                            <span class=" btn-inner--icon"> <i class=" far fa-eye"> </i> </span>
+                        </button>
+                        <button class=" btn btn-icon btn-danger btn-sm" type="button" title="Delete">
+                            <span class=" btn-inner--icon"> <i class=" fas fa-trash"> </i> </span>
+                        </button>
+                    </ng-template>
+                </ngx-datatable-column>
+          </ngx-datatable>
+        </div>
+    </div>
+
+</div>

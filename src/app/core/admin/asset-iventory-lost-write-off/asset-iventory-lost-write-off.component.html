@@ -1,0 +1,238 @@
+<div class="header pb-6">
+    <div class="container-fluid">
+        <div class="header-body">
+            <div class="row align-items-center py-4">
+                <div class="col-lg-6 col-7">
+                    <h6 class="h2 text-dark d-inline-block mb-0">Lost and Write Off</h6>
+  
+                    <nav aria-label="breadcrumb" class=" d-none d-md-inline-block ml-md-4">
+                        <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                            <li class=" breadcrumb-item">
+                                <a href="javascript:void(0)"> <i class="far fa-edit text-dark"> </i> </a>
+                            </li>
+                            <li aria-current="page" class="breadcrumb-item active">
+                                Lost and Write Off
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="col-lg-6 col-5 text-right">
+                    <h3>{{today | date:'fullDate'}}</h3>
+                  </div>
+            </div>
+  
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid mt--6">
+    <div class="row">
+        <div class="col-md-12 col-lg-6">
+            <div class="card">
+                <div class="card-header bg-secondary">
+                    <h3 class="m-0">Types of Assets/Iventory</h3>
+                </div>
+                <div class="card-body">
+                    <div class="chart">
+                        <div class="amchart" id="chartPie1lostwrite"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-lg-6">
+            <div class="card">
+                <div class="card-header bg-secondary">
+                    <h3 class="m-0">Report per Month</h3>
+                </div>
+                <div class="card-body">
+                    <div class="chart">
+                        <div class="amchart" id="chartbar1lostwrite"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3 class="m-0">Lost and Write Off</h3>
+
+    <div class=" card">
+        <div class=" card-header">
+          <h3 class=" mb-0">List of Report</h3>
+
+          <!-- <p class=" text-sm mb-0">
+            This is an exmaple of datatable using the well known ngx-datatable
+            plugin. This is a minimal setup in order to get started fast.
+          </p> -->
+        </div>
+        <div class="dataTables_wrapper py-4">
+            <div class="row">
+              <div class="col-sm-12 col-md-6">
+                <div class="dataTables_length" id="datatable_length">
+                  <label>
+                    Show
+                    <select
+                      name="datatable_length"
+                      aria-controls="datatable"
+                      class="form-control form-control-sm"
+                      (change)="entriesChange($event)"
+                    >
+                      <option value="10" [selected]="entries == 10">10</option>
+                      <option value="25" [selected]="entries == 25">25</option>
+                      <option value="50" [selected]="entries == 50">50</option>
+                      <option value="-1" [selected]="entries == -1">All</option>
+                    </select>
+                    entries
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <div id="datatable_filter" class="dataTables_filter">
+                  <label>
+                    <input
+                      type="search"
+                      class="form-control form-control-sm"
+                      placeholder="Search records"
+                      aria-controls="datatable"
+                      (keyup)="filterTable($event)"
+                    />
+                  </label>
+                </div>
+              </div>
+            </div>
+  
+            <ngx-datatable
+              class="bootstrap selection-cell"
+              [columnMode]="'force'"
+              [headerHeight]="50"
+              [footerHeight]="50"
+              [rowHeight]="'auto'"
+              [limit]="entries != -1 ? entries : undefined"
+              [rows]="temp"
+              (activate)="onActivate($event)"
+            >
+                <ngx-datatable-column name="No">
+                    <ng-template
+                    let-rowIndex="rowIndex"
+                    let-row="row"
+                    ngx-datatable-cell-template
+                    >
+                    <strong>{{ rowIndex + 1 }}</strong>
+                    </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column name="Report Name" >
+                    <ng-template let-row="row" ngx-datatable-cell-template>
+                    {{row.reportname}}
+                    </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column name="Report ID" >
+                    <ng-template let-row="row" ngx-datatable-cell-template>
+                    {{row.reportid}}
+                    </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column name="Date" >
+                    <ng-template let-row="row" ngx-datatable-cell-template>
+                    {{row.date}}
+                    </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column name="Reporter Name" >
+                    <ng-template let-row="row" ngx-datatable-cell-template>
+                    {{row.reportername}}
+                    </ng-template>
+                </ngx-datatable-column>
+                    
+                <ngx-datatable-column name="Action">
+                    <ng-template let-row="row" ngx-datatable-cell-template>
+                        <div class="row">
+                            <button class=" btn btn-icon btn-default btn-sm" type="button" title="View">
+                                <span class=" btn-inner--icon"> <i class=" far fa-eye"> </i> </span>
+                            </button>
+                            <button class=" btn btn-icon btn-success btn-sm" type="button" title="Download">
+                                <span class=" btn-inner--icon"> <i class=" fas fa-file-download"> </i> </span>
+                            </button>
+                            <button class=" btn btn-icon btn-danger btn-sm" type="button" title="Delete">
+                                <span class=" btn-inner--icon"> <i class=" fas fa-trash"> </i> </span>
+                            </button>
+                        </div>
+                        
+                    </ng-template>
+                </ngx-datatable-column>
+            </ngx-datatable>
+          </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6 col-md-4">
+            <div class="card">
+                <div class="card-header bg-secondary">
+                    <h6 class="h2 text-dark d-inline-block mb-0">Write Off Report</h6>
+                </div>
+                <div class="card-body">
+                    <div class=" form-group">
+                        <label class=" form-control-label" for="example4cols3Input">
+                          Name
+                        </label>
+            
+                        <input
+                          class=" form-control"
+                          id="example4cols3Input"
+                          placeholder="Name"
+                          type="text"
+                        />
+                    </div>
+                    <div class=" form-group">
+                        <label class=" form-control-label" for="example4cols3Input">
+                            User ID
+                        </label>
+            
+                        <input
+                          class=" form-control"
+                          id="example4cols3Input"
+                          placeholder="User ID"
+                          type="text"
+                        />
+                    </div>
+                    <div class=" form-group">
+                        <label class=" form-control-label" for="example4cols3Input">
+                            Reason / Cause
+                        </label>
+            
+                        <select class=" form-control" id="exampleFormControlSelect1">
+                          <option> 1 </option>
+                          <option> 2 </option>
+                          <option> 3 </option>
+                          <option> 4 </option>
+                        </select>
+                    </div>
+                    <div class=" form-group">
+                        <label class=" form-control-label" for="example4cols3Input">
+                          Date
+                        </label>
+            
+                        <input
+                            class=" form-control"
+                            id="example-date-input"
+                            type="date"
+                            value="2020-01-01"
+                        />
+                    </div>
+                    <div class="text-right">
+                        <button class="btn btn-default" type="button">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-8">
+            <div class="card">
+                <div class="card-header bg-secondary ">
+                    <h3 class="m-0 text-dark">Write Off Statistic</h3>
+                </div>
+                <div class="card-body">
+                    <div class="chart">
+                        <div class="amchart" id="chartbpie2lostwrite"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

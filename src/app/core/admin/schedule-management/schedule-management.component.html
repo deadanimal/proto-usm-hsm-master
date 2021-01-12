@@ -1,0 +1,496 @@
+<div class="header pb-6">
+    <div class="container-fluid">
+        <div class="header-body">
+            <div class="row align-items-center py-4">
+                <div class="col-lg-6 col-7">
+                    <h6 class="h2 text-dark d-inline-block mb-0">Schedule Management</h6>
+  
+                    <nav aria-label="breadcrumb" class=" d-none d-md-inline-block ml-md-4">
+                        <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                            <li class=" breadcrumb-item">
+                                <a href="javascript:void(0)"> <i class="far fa-calendar-alt text-dark"> </i> </a>
+                            </li>
+                            <li aria-current="page" class="breadcrumb-item active">
+                                Schedule Management
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="col-lg-6 col-5 text-right">
+                  <h3>{{today | date:'fullDate'}}</h3>
+                </div>
+            </div>
+  
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid mt--6">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <div class=" form-group">
+                        <label class=" form-control-label" for="example4cols3Input">
+                            Doctors
+                        </label>
+            
+                        <select class=" form-control" id="exampleFormControlSelect1">
+                          <option> 1 </option>
+                          <option> 2 </option>
+                          <option> 3 </option>
+                          <option> 4 </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <div class=" form-group">
+                        <label class=" form-control-label" for="example4cols3Input">
+                            Specialization
+                        </label>
+            
+                        <select class=" form-control" id="exampleFormControlSelect1">
+                          <option> 1 </option>
+                          <option> 2 </option>
+                          <option> 3 </option>
+                          <option> 4 </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <div class=" form-group">
+                        <label class=" form-control-label" for="example4cols3Input">
+                          Date
+                        </label>
+            
+                        <input
+                            class=" form-control"
+                            id="example-date-input"
+                            type="date"
+                            value="2020-01-01"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class=" col-xl-3 col-md-6">
+            <div class=" card bg-secondary border-0">
+                <div class=" card-body">
+                  <div class=" row">
+                      <div class=" col">
+                        <h5 class=" card-title text-uppercase text-muted mb-0 text-dark">
+                            Doctor
+                        </h5>
+            
+                        <span class=" h2 font-weight-bold mb-0 text-dark"> 40 </span>
+    
+                      </div>
+                  </div>
+                </div>
+            </div>
+        </div> 
+        <div class=" col-xl-3 col-md-6">
+          <div class=" card bg-secondary border-0">
+              <div class=" card-body">
+                <div class=" row">
+                    <div class=" col">
+                      <h5 class=" card-title text-uppercase text-muted mb-0 text-dark">
+                          Admitted Patient
+                      </h5>
+          
+                      <span class=" h2 font-weight-bold mb-0 text-dark"> 8 </span>
+  
+                    </div>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class=" col-xl-3 col-md-6">
+            <div class=" card bg-secondary border-0">
+                <div class=" card-body">
+                  <div class=" row">
+                      <div class=" col">
+                        <h5 class=" h2 font-weight-bold mb-0 text-dark">
+                            3.28%
+                        </h5>
+            
+                        <span class=" card-title text-uppercase text-muted mb-0 text-dark"> Readmission rate </span>
+                      </div>
+                  </div>
+        
+                <p class=" mt-3 mb-0 text-sm">
+                  <span class=" card-title text-uppercase text-muted mb-0 text-dark"> Readmission = 2 </span>
+                  <span class=" card-title text-uppercase text-muted mb-0 text-dark"> Readmission = 61 </span>
+                </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+      <div class=" col-xl-3 col-md-6">
+          <div class=" card bg-secondary border-0">
+              <div class=" card-body">
+                <div class=" row">
+                    <div class=" col">
+                      <h5 class=" card-title text-uppercase text-muted mb-0 text-dark">
+                          8 Days
+                      </h5>
+          
+                      <span class=" h2 font-weight-bold mb-0 text-dark"> Average length of stay  </span>
+  
+                    </div>
+                </div>
+              </div>
+          </div>
+      </div> 
+      <div class=" col-xl-3 col-md-6">
+        <div class=" card bg-secondary border-0">
+            <div class=" card-body">
+              <div class=" row">
+                  <div class=" col">
+                    <h5 class=" card-title text-uppercase text-muted mb-0 text-dark">
+                        Patients
+                    </h5>
+        
+                    <span class=" h2 font-weight-bold mb-0 text-dark"> Male = 55 </span>
+                    <span class=" h2 font-weight-bold mb-0 text-dark"> Female = 55 </span>
+
+                  </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class=" col-xl-3 col-md-6">
+          <div class=" card bg-secondary border-0">
+              <div class=" card-body">
+                <div class=" row">
+                    <div class=" col">
+                      <h5 class=" h2 font-weight-bold mb-0 text-dark">
+                          3.28%
+                      </h5>
+          
+                      <span class=" card-title text-uppercase text-muted mb-0 text-dark"> Bed Occupied rate </span>
+                    </div>
+                </div>
+      
+              <p class=" mt-3 mb-0 text-sm">
+                <span class=" card-title text-uppercase text-muted mb-0 text-dark"> Occupied = 2 </span>
+                <span class=" card-title text-uppercase text-muted mb-0 text-dark"> Total = 61 </span>
+              </p>
+              </div>
+          </div>
+      </div>
+    </div>
+    
+
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-header bg-secondary ">
+                    <h3 class="m-0 text-dark">Patient Count by Weeks</h3>
+                </div>
+                <div class="card-body">
+                    <div class="chart">
+                        <div class="amchart" id="chartline1schedule"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-header bg-secondary ">
+                    <h3 class="m-0 text-dark">Patient Count by Specilization</h3>
+                </div>
+                <div class="card-body">
+                    <div class="chart">
+                        <div class="amchart" id="chartbar1schedule"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-2 text-right" >
+        <button
+          class=" btn btn-block btn-default mb-3"
+          data-target="#modal-default"
+          data-toggle="modal"
+          type="button"
+          (click)="openDefaultModal(modalDefault)"
+        >
+          Register New
+        </button>
+        <!-- <button class="btn btn-default" data-toggle="modal" data-target="#admissionModal" type="button">Register New</button> -->
+        <ng-template #modalDefault>
+          <div class=" modal-header">
+            <h6 class=" modal-title" id="modal-title-default">
+              Regiser New Schedule
+            </h6>
+  
+            <button
+              aria-label="Close"
+              class=" close"
+              data-dismiss="modal"
+              type="button"
+              (click)="defaultModal.hide()"
+            >
+              <span aria-hidden="true"> × </span>
+            </button>
+          </div>
+  
+          <div class=" modal-body">
+            <div class=" col-12">
+              <div class=" form-group">
+                <label class=" form-control-label" for="example4cols3Input">
+                  Patient's Name
+                </label>
+    
+                <input
+                  class=" form-control"
+                  id="example4cols3Input"
+                  placeholder="Patient's Name"
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class=" col-12">
+              <div class=" form-group">
+                <label class=" form-control-label" for="example4cols3Input">
+                  Doctor's Name
+                </label>
+    
+                <input
+                  class=" form-control"
+                  id="example4cols3Input"
+                  placeholder="Doctor's Name"
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class="col-12">
+              <div class=" form-group">
+                <label class=" form-control-label" for="example-date-input">
+                  Date
+                </label>
+    
+                <input
+                    class=" form-control"
+                    id="example-date-input"
+                    type="date"
+                    value="2020-01-01"
+                />
+              </div>  
+            </div>
+            <div class="col-12">
+              <div class=" form-group row">
+                <label
+                  class=" form-control-label"
+                  for="example-time-input"
+                >
+                  Time
+                </label>
+  
+                <input
+                    class=" form-control"
+                    id="example-time-input"
+                    type="time"
+                    value="10:30:00"
+                  />
+              </div>
+            </div>
+            <div class=" col-12">
+                <div class=" form-group">
+                  <label class=" form-control-label" for="example4cols3Input">
+                    Operating Theatre
+                  </label>
+      
+                  <select class=" form-control" id="exampleFormControlSelect1">
+                    <option> 1 </option>
+    
+                    <option> 2 </option>
+                    <option> 3 </option>
+                  </select>
+                </div>
+              </div>
+              <div class=" col-12">
+                <div class=" form-group">
+                  <label class=" form-control-label" for="example4cols3Input">
+                    Equipment
+                  </label>
+      
+                  <select class=" form-control" id="exampleFormControlSelect1">
+                    <option> 1 </option>
+    
+                    <option> 2 </option>
+                    <option> 3 </option>
+                  </select>
+                </div>
+              </div>
+              <div class=" col-12">
+                <div class=" form-group">
+                  <label class=" form-control-label" for="example4cols3Input">
+                    Doctor
+                  </label>
+      
+                  <select class=" form-control" id="exampleFormControlSelect1">
+                    <option> 1 </option>
+    
+                    <option> 2 </option>
+                    <option> 3 </option>
+                  </select>
+                </div>
+              </div>
+              <div class=" col-12">
+                <div class=" form-group">
+                  <label class=" form-control-label" for="example4cols3Input">
+                    Nurse
+                  </label>
+      
+                  <select class=" form-control" id="exampleFormControlSelect1">
+                    <option> 1 </option>
+    
+                    <option> 2 </option>
+                    <option> 3 </option>
+                  </select>
+                </div>
+              </div>
+          </div>
+  
+          <div class=" modal-footer">
+            <button class=" btn btn-success" (click)="successSwal()">
+              Success alert
+            </button>
+  
+            <button
+              class=" btn btn-link ml-auto"
+              data-dismiss="modal"
+              type="button"
+              (click)="defaultModal.hide()"
+            >
+              Close
+            </button>
+          </div>
+        </ng-template>
+      </div>
+
+    <div class=" card">
+        <div class=" card-header">
+          <h3 class=" mb-0">List of Report</h3>
+
+          <!-- <p class=" text-sm mb-0">
+            This is an exmaple of datatable using the well known ngx-datatable
+            plugin. This is a minimal setup in order to get started fast.
+          </p> -->
+        </div>
+        <div class="dataTables_wrapper py-4">
+            <div class="row">
+              <div class="col-sm-12 col-md-6">
+                <div class="dataTables_length" id="datatable_length">
+                  <label>
+                    Show
+                    <select
+                      name="datatable_length"
+                      aria-controls="datatable"
+                      class="form-control form-control-sm"
+                      (change)="entriesChange($event)"
+                    >
+                      <option value="10" [selected]="entries == 10">10</option>
+                      <option value="25" [selected]="entries == 25">25</option>
+                      <option value="50" [selected]="entries == 50">50</option>
+                      <option value="-1" [selected]="entries == -1">All</option>
+                    </select>
+                    entries
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <div id="datatable_filter" class="dataTables_filter">
+                  <label>
+                    <input
+                      type="search"
+                      class="form-control form-control-sm"
+                      placeholder="Search records"
+                      aria-controls="datatable"
+                      (keyup)="filterTable($event)"
+                    />
+                  </label>
+                </div>
+              </div>
+            </div>
+  
+            <ngx-datatable
+              class="bootstrap selection-cell"
+              [columnMode]="'force'"
+              [headerHeight]="50"
+              [footerHeight]="50"
+              [rowHeight]="'auto'"
+              [limit]="entries != -1 ? entries : undefined"
+              [rows]="temp"
+              (activate)="onActivate($event)"
+            >
+                <ngx-datatable-column name="No">
+                    <ng-template
+                    let-rowIndex="rowIndex"
+                    let-row="row"
+                    ngx-datatable-cell-template
+                    >
+                    <strong>{{ rowIndex + 1 }}</strong>
+                    </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column name="Doctor Name" >
+                    <ng-template let-row="row" ngx-datatable-cell-template>
+                    {{row.doctorname}}
+                    </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column name="Specialization" >
+                    <ng-template let-row="row" ngx-datatable-cell-template>
+                    {{row.specialization}}
+                    </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column name="Date & Time" >
+                    <ng-template let-row="row" ngx-datatable-cell-template>
+                    {{row.datetime}}
+                    </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column name="Patient ID" >
+                    <ng-template let-row="row" ngx-datatable-cell-template>
+                    {{row.patientid}}
+                    </ng-template>
+                </ngx-datatable-column>
+                    
+                <ngx-datatable-column>
+                    <ng-template ngx-datatable-header-template>
+                      <span>Status</span>
+                    </ng-template>
+                    <ng-template let-row="row" ngx-datatable-cell-template>
+                      <span
+                        *ngIf="row.status == 'confirm'"
+                        class="badge badge-pill badge-success"
+                        >Confirmed</span
+                      >
+                      <span
+                        *ngIf="row.status == 'pending'"
+                        class="badge badge-pill badge-warning"
+                        >Pending</span
+                      >                        
+                    </ng-template>
+                </ngx-datatable-column>
+            </ngx-datatable>
+          </div>
+    </div>
+
+</div>
